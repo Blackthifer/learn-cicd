@@ -5,9 +5,9 @@ import (
 	"testing"
 )
 
-func TestGetAPIKey(t *testing.T){
+func TestGetAPIKey(t *testing.T) {
 	_, err := GetAPIKey(http.Header{})
-	if err != ErrNoAuthHeaderIncluded{
+	if err != ErrNoAuthHeaderIncluded {
 		t.Errorf("Expected %s, got %s", ErrNoAuthHeaderIncluded.Error(), err.Error())
 	}
 }
